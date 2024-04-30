@@ -9,7 +9,7 @@
 
         <ul class="sidebar-nav">
             <li class="sidebar-header">
-                Pages
+                Main Features
             </li>
 
             <li class="sidebar-item {{ request()->is('/') ? 'active' : '' }}">
@@ -27,7 +27,7 @@
 
 
             <li class="sidebar-header">
-                Tools & Components
+                Logs & Reporting
             </li>
 
             <li class="sidebar-item">
