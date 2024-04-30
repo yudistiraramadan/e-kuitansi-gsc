@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class KuitansiController extends Controller
 {
+    public function dashboard(){
+        return view('dashboard', ['title'=>'Dashboard']);
+    }
+
     public function index(){
         $data = Kuitansi::all();
         // dd($data);
