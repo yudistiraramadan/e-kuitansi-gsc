@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/daftar-kuitansi', [KuitansiController::class, 'index'])->name('kuitansi');
-// Route::get('/daftar-kuitansi', KuitansiController::class);
+Route::get('/daftar-kuitansi', [KuitansiController::class, 'index']);
+Route::get('/tambah-kuitansi', [KuitansiController::class, 'create']);

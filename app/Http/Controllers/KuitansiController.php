@@ -12,4 +12,8 @@ class KuitansiController extends Controller
         // dd($data);
         return view('kuitansi.daftar-kuitansi', ['title'=>'Daftar Kuitansi'], compact('data'));
     }
+
+    public function create(){
+        return view('kuitansi.tambah', ['title'=>'Tambah Kuitansi']);
+    }
 }

@@ -18,7 +18,8 @@
                 </a>
             </li>
 
-            <li class="sidebar-item {{ request()->is('daftar-kuitansi') ? 'active' : '' }}">
+            <li
+                class="sidebar-item {{ request()->is('daftar-kuitansi', 'tambah-kuitansi', 'edit-kuitansi') ? 'active' : '' }}">
                 <a class="sidebar-link" href="/daftar-kuitansi">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Kuitansi</span>
                 </a>
