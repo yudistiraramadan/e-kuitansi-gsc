@@ -17,7 +17,7 @@
                 <div class="container-fluid p-0">
 
                     {{-- Title --}}
-                    <x-title></x-title>
+                    <x-title>{{ $title }}</x-title>
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
@@ -25,7 +25,7 @@
                                     {{-- <h5 class="card-title mb-0">Empty card</h5> --}}
                                 </div>
                                 <div class="card-body">
-                                    <p>hii my name anomali</p>
+                                    {{ $slot }}
                                 </div>
                             </div>
                         </div>

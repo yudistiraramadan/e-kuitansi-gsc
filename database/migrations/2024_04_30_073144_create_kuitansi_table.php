@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('keperluan');
             $table->enum('jenis_kuitansi', ['pemasukan', 'pengeluaran', 'penerimaan_barang'])->nullable();
             $table->enum('pembayaran', ['tunai', 'transfer', 'lainnya']);
+            $table->date('tanggal');
 
             $table->timestamps();
         });

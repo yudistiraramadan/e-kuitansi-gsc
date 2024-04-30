@@ -20,6 +20,7 @@ class KuitansiSeeder extends Seeder
             'keperluan' => 'Kotak Infaq',
             'jenis_kuitansi' => 'pemasukan',
             'pembayaran' => 'tunai',
+            'tanggal' => '2024-04-30',
         ]);
         Kuitansi::create([
             'pengaju' => 'Farhan Kebab',
@@ -28,6 +29,7 @@ class KuitansiSeeder extends Seeder
             'keperluan' => 'Uang Makan Basecamp',
             'jenis_kuitansi' => 'penerimaan_barang',
             'pembayaran' => 'transfer',
+            'tanggal' => '2024-04-30',
         ]);
         Kuitansi::create([
             'pengaju' => 'Sigit Rendang',
@@ -36,6 +38,7 @@ class KuitansiSeeder extends Seeder
             'keperluan' => 'Pentasyarufan',
             'jenis_kuitansi' => 'pengeluaran',
             'pembayaran' => 'lainnya',
+            'tanggal' => '2024-04-30',
         ]);
     }
 }
