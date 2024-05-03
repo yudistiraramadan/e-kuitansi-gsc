@@ -15,13 +15,13 @@
             </tr>
         </thead>
         <tbody>
-            @forelse ($data as $item)
+            @forelse ($kuitansi as $data)
                 <tr>
-                    <td>{{ $item->pengaju }}</td>
-                    <td>{{ $item->nominal }}</td>
-                    <td>{{ $item->keperluan }}</td>
-                    <td>{{ $item->jenis_kuitansi }}</td>
-                    <td>{{ $item->tanggal }}</td>
+                    <td>{{ $data->pengaju }}</td>
+                    <td>{{ $data->nominal }}</td>
+                    <td>{{ $data->keperluan }}</td>
+                    <td>{{ $data->jenis_kuitansi }}</td>
+                    <td>{{ $data->tanggal }}</td>
                 </tr>
             @empty
                 <div class="btn btn-danger">

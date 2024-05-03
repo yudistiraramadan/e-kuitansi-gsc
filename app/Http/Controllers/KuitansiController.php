@@ -12,12 +12,15 @@ class KuitansiController extends Controller
     }
 
     public function index(){
-        $data = Kuitansi::all();
-        // dd($data);
-        return view('kuitansi.daftar-kuitansi', ['title'=>'Daftar Kuitansi'], compact('data'));
+        $kuitansi = Kuitansi::all();
+        
+        // dd($kuitansi);
+        return view('kuitansi.daftar-kuitansi', ['title'=>'Daftar Kuitansi'], compact('kuitansi'));
     }
-
+    
     public function create(){
-        return view('kuitansi.tambah', ['title'=>'Tambah Kuitansi']);
+        $jenisKuitansi = Kuitansi::pluck('jenis_kuitansi');
+        $pembayaran = Kuitansi::pluck('pembayaran');
+        return view('kuitansi.tambah', ['title'=>'Tambah Kuitansi'], compact('jenisKuitansi','pembayaran'));
     }
 }
