@@ -42,6 +42,19 @@
                                     </path>
                                 </svg>
                             </a>&nbsp;&nbsp;
+                            <a href="/edit-kuitansi/{{ $data->id }}" data-id="" class="delete-kecamatan"
+                                name="delete" data-toggle="tooltip" data-placement="top" title="" data-id="4"
+                                data-original-title="Hapus"><svg width="22" height="22" fill="#787878"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#787878">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M19,12h3v8a2,2,0,0,1-2,2H19ZM17,4V22H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H15A2,2,0,0,1,17,4ZM10,16H5v2h5Zm4-5H5v2h9Zm0-5H5V8h9Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>&nbsp;&nbsp;
                         </div>
                     </td>
                 </tr>
