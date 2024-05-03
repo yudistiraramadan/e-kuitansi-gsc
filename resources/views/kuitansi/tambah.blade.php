@@ -7,7 +7,7 @@
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label for="pengaju" class="form-label">Nama Pengaju</label>
-                    <input type="text" class="form-control" id="pengaju" name="pengaju">
+                    <input type="text" class="form-control" id="pengaju" name="pengaju" value="{{ old('pengaju') }}">
                     <div id="pengaju" class="form-text">Nama pengaju/penerima pembuat kuitansi</div>
                     @error('pengaju')
                         <div class="text text-danger">
@@ -19,7 +19,8 @@
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label for="keperluan" class="form-label">Guna Keperluan</label>
-                    <input type="text" class="form-control" id="keperluan" name="keperluan">
+                    <input type="text" class="form-control" id="keperluan" name="keperluan"
+                        value="{{ old('keperluan') }}">
                     @error('keperluan')
                         <div class="text text-danger">
                             {{ $message }}
@@ -33,7 +34,8 @@
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label for="nominal" class="form-label">Nominal</label>
-                    <input type="text" class="form-control" id="nominal" name="nominal">
+                    <input type="text" class="form-control" id="nominal" name="nominal"
+                        value="{{ old('nominal') }}">
                     @error('nominal')
                         <div class="text text-danger">
                             {{ $message }}
@@ -44,7 +46,8 @@
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label for="terbilang" class="form-label">Terbilang</label>
-                    <input type="text" class="form-control" id="terbilang" name="terbilang">
+                    <input type="text" class="form-control" id="terbilang" name="terbilang"
+                        value="{{ old('terbilang') }}">
                     @error('terbilang')
                         <div class="text text-danger">
                             {{ $message }}
@@ -85,7 +88,7 @@
             </div>
             <div class="col-lg-4">
                 <label for="tanggal" class="form-label">Tanggal Pembuatan</label>
-                <input type="date" name="tanggal" id="tanggal" class="form-control">
+                <input type="date" name="tanggal" id="tanggal" class="form-control" value="{{ old('tanggal') }}">
                 @error('tanggal')
                     <div class="text text-danger">
                         {{ $message }}

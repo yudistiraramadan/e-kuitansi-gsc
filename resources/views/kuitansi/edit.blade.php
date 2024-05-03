@@ -1,7 +1,7 @@
 <x-main>
     <x-slot:title>{{ $title }}</x-slot:title>
 
-    <form action="#" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('updateKuitansi', $kuitansi->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-lg-6">

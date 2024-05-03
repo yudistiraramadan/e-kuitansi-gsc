@@ -12,3 +12,4 @@ Route::get('/daftar-kuitansi', [KuitansiController::class, 'index'])->name('daft
 Route::get('/tambah-kuitansi', [KuitansiController::class, 'create'])->name('tambahKuitansi');
 Route::post('/store-kuitansi', [KuitansiController::class, 'store'])->name('storeKuitansi');
 Route::get('/edit-kuitansi/{id}', [KuitansiController::class, 'edit'])->name('editKuitansi');
+Route::post('/update-kuitansi/{id}', [KuitansiController::class, 'update'])->name('updateKuitansi');

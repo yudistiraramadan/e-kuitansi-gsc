@@ -64,4 +64,41 @@ class KuitansiController extends Controller
         $kuitansi = Kuitansi::findOrFail($id);
         return view('kuitansi.edit', ['title'=>'Edit Kuitansi'], compact('kuitansi'));
     }
+
+    public function update(Request $request, $id){
+        $kuitansi = Kuitansi::findOrFail($id);
+        
+        // validation
+        $request->validate(
+            [
+                'pengaju'=>'required',
+                'nominal'=>'required',
+                'terbilang'=>'required',
+                'keperluan'=>'required',
+                'jenis_kuitansi'=>'required',
+                'pembayaran'=>'required',
+                'tanggal'=>'required',
+            ],
+            [
+                'pengaju.required' => 'data tidak boleh kosong',
+                'nominal.required' => 'data tidak boleh kosong',
+                'terbilang.required' => 'data tidak boleh kosong',
+                'keperluan.required' => 'data tidak boleh kosong',
+                'jenis_kuitansi.required' => 'data tidak boleh kosong',
+                'pembayaran.required' => 'data tidak boleh kosong',
+                'tanggal.required' => 'data tidak boleh kosong',
+            ]
+            );
+
+        $kuitansi->update([
+            'pengaju' => $request -> pengaju,
+            'nominal' => $request -> nominal,
+            'terbilang' => $request -> terbilang,
+            'keperluan' => $request -> keperluan,
+            'jenis_kuitansi' => $request -> jenis_kuitansi,
+            'pembayaran' => $request -> pembayaran,
+            'tanggal' => $request -> tanggal,
+        ]);
+        return redirect()->route('daftarKuitansi');
+    }
 }
