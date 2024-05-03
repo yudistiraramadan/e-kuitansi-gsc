@@ -25,6 +25,28 @@ class KuitansiController extends Controller
     }
 
     public function store(Request $request){
+        // validation
+        $request->validate(
+            [
+                'pengaju'=>'required',
+                'nominal'=>'required',
+                'terbilang'=>'required',
+                'keperluan'=>'required',
+                'jenis_kuitansi'=>'required',
+                'pembayaran'=>'required',
+                'tanggal'=>'required',
+            ],
+            [
+                'pengaju.required' => 'data tidak boleh kosong',
+                'nominal.required' => 'data tidak boleh kosong',
+                'terbilang.required' => 'data tidak boleh kosong',
+                'keperluan.required' => 'data tidak boleh kosong',
+                'jenis_kuitansi.required' => 'data tidak boleh kosong',
+                'pembayaran.required' => 'data tidak boleh kosong',
+                'tanggal.required' => 'data tidak boleh kosong',
+            ]
+            );
+
         // create kuitansi
         Kuitansi::create([
             'pengaju' => $request -> pengaju,
