@@ -17,8 +17,8 @@ return new class extends Migration
             $table->bigInteger('nominal');
             $table->string('terbilang');
             $table->string('keperluan');
-            $table->enum('jenis_kuitansi', ['pemasukan', 'pengeluaran', 'penerimaan_barang'])->nullable();
-            $table->enum('pembayaran', ['tunai', 'transfer', 'lainnya']);
+            $table->enum('jenis_kuitansi', ['Pemasukan', 'Pengeluaran', 'Penerimaan Barang'])->nullable();
+            $table->enum('pembayaran', ['Tunai', 'Transfer', 'Lainnya']);
             $table->date('tanggal');
 
             $table->timestamps();

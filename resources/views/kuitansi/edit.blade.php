@@ -64,9 +64,9 @@
                 <select class="form-select" name="jenis_kuitansi" id="jenis_kuitansi">
                     {{-- <option selected>Jenis Kuitansi</option> --}}
                     <option value="{{ $kuitansi->jenis_kuitansi }}">{{ $kuitansi->jenis_kuitansi }}</option>
-                    <option value="pemasukan">Pemasukan</option>
-                    <option value="pengeluaran">Pengeluaran</option>
-                    <option value="penerimaan_barang">Penerimaan Barang</option>
+                    <option value="Pemasukan">Pemasukan</option>
+                    <option value="Pengeluaran">Pengeluaran</option>
+                    <option value="Penerimaan Barang">Penerimaan Barang</option>
                 </select>
                 @error('jenis_kuitansi')
                     <div class="text text-danger">
@@ -79,9 +79,9 @@
                 <select class="form-select" name="pembayaran" id="pembayaran">
                     {{-- <option selected>Metode Pembayaran</option> --}}
                     <option value="{{ $kuitansi->pembayaran }}">{{ $kuitansi->pembayaran }}</option>
-                    <option value="tunai">Tunai</option>
-                    <option value="transfer">Transfer</option>
-                    <option value="tunai">Tunai</option>
+                    <option value="Tunai">Tunai</option>
+                    <option value="Transfer">Transfer</option>
+                    <option value="Lainnya">Lainnya</option>
                 </select>
                 @error('pembayaran')
                     <div class="text text-danger">

@@ -18,8 +18,8 @@ class KuitansiSeeder extends Seeder
             'nominal' => 500000,
             'terbilang' => 'LIMA RATUS RIBU RUPIAH',
             'keperluan' => 'Kotak Infaq',
-            'jenis_kuitansi' => 'pemasukan',
-            'pembayaran' => 'tunai',
+            'jenis_kuitansi' => 'Pemasukan',
+            'pembayaran' => 'Tunai',
             'tanggal' => '2024-04-30',
         ]);
         Kuitansi::create([
@@ -27,8 +27,8 @@ class KuitansiSeeder extends Seeder
             'nominal' => 120000,
             'terbilang' => 'SERATUS DUA PULUH RIBU RUPIAH',
             'keperluan' => 'Uang Makan Basecamp',
-            'jenis_kuitansi' => 'penerimaan_barang',
-            'pembayaran' => 'transfer',
+            'jenis_kuitansi' => 'Penerimaan Barang',
+            'pembayaran' => 'Transfer',
             'tanggal' => '2024-04-30',
         ]);
         Kuitansi::create([
@@ -36,8 +36,8 @@ class KuitansiSeeder extends Seeder
             'nominal' => 80000,
             'terbilang' => 'DELAPAN PULUH RIBU RUPIAH',
             'keperluan' => 'Pentasyarufan',
-            'jenis_kuitansi' => 'pengeluaran',
-            'pembayaran' => 'lainnya',
+            'jenis_kuitansi' => 'Pengeluaran',
+            'pembayaran' => 'Lainnya',
             'tanggal' => '2024-04-30',
         ]);
     }
