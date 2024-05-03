@@ -4,7 +4,7 @@
     <a href="/tambah-kuitansi">
         <div class="btn btn-success" style="margin-bottom: 10px;">Tambah data</div>
     </a>
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover" id="tb-kuitansi">
         <thead>
             <tr>
                 <th scope="col">Terima Dari</th>
@@ -67,3 +67,6 @@
     </table>
     {{-- {{ $data->links() }} --}}
 </x-main>
+<script>
+    let table = new DataTable('#tb-kuitansi');
+</script>
