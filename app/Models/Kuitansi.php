@@ -10,6 +10,7 @@ class Kuitansi extends Model
     use HasFactory;
     protected $table = 'kuitansi';
     protected $fillable = [
-        'pengaju', 'nominal', 'terbilang', 'keperluan', 'jenis_kuitansi', 'pembayaran'
+        'pengaju', 'nominal', 'terbilang', 'keperluan', 
+        'jenis_kuitansi', 'pembayaran', 'tanggal'
     ];
 }

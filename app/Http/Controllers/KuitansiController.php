@@ -23,4 +23,18 @@ class KuitansiController extends Controller
         $pembayaran = Kuitansi::pluck('pembayaran');
         return view('kuitansi.tambah', ['title'=>'Tambah Kuitansi'], compact('jenisKuitansi','pembayaran'));
     }
+
+    public function store(Request $request){
+        // create kuitansi
+        Kuitansi::create([
+            'pengaju' => $request -> pengaju,
+            'nominal' => $request -> nominal,
+            'terbilang' => $request -> terbilang,
+            'keperluan' => $request -> keperluan,
+            'jenis_kuitansi' => $request -> jenis_kuitansi,
+            'pembayaran' => $request -> pembayaran,
+            'tanggal' => $request -> tanggal,
+        ]);
+        return redirect()->route('daftarKuitansi');
+    }
 }
