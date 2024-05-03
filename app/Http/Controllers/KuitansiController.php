@@ -59,4 +59,9 @@ class KuitansiController extends Controller
         ]);
         return redirect()->route('daftarKuitansi');
     }
+
+    public function edit($id){
+        $kuitansi = Kuitansi::findOrFail($id);
+        return view('kuitansi.edit', ['title'=>'Edit Kuitansi'], compact('kuitansi'));
+    }
 }
