@@ -13,3 +13,4 @@ Route::get('/tambah-kuitansi', [KuitansiController::class, 'create'])->name('tam
 Route::post('/store-kuitansi', [KuitansiController::class, 'store'])->name('storeKuitansi');
 Route::get('/edit-kuitansi/{id}', [KuitansiController::class, 'edit'])->name('editKuitansi');
 Route::post('/update-kuitansi/{id}', [KuitansiController::class, 'update'])->name('updateKuitansi');
+Route::get('/delete-kuitansi/{id}', [KuitansiController::class, 'destroy'])->name('deleteKuitansi');

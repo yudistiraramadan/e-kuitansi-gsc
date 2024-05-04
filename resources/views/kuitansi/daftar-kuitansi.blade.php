@@ -32,8 +32,8 @@
                                         fill="#787878"></path>
                                 </svg>
                             </a>&nbsp;&nbsp;
-                            <a href="javascript:void(0)" data-id="" class="delete-kecamatan" name="delete"
-                                data-toggle="tooltip" data-placement="top" title="" data-id="4"
+                            <a href="/delete-kuitansi/{{ $data->id }}" data-id="" class="delete-kecamatan"
+                                name="delete" data-toggle="tooltip" data-placement="top" title="" data-id="4"
                                 data-original-title="Hapus"><svg width="22" height="22" viewBox="0 0 22 22"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path

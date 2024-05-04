@@ -101,4 +101,10 @@ class KuitansiController extends Controller
         ]);
         return redirect()->route('daftarKuitansi');
     }
+
+    public function destroy($id){
+        $kuitansi = Kuitansi::findOrFail($id);
+        $kuitansi->delete();
+        return redirect()->route('daftarKuitansi');
+    }
 }
