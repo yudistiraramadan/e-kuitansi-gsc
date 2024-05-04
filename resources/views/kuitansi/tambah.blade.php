@@ -34,7 +34,7 @@
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label for="nominal" class="form-label">Nominal</label>
-                    <input type="text" class="form-control" id="nominal" name="nominal"
+                    <input type="number" class="form-control" id="nominal" name="nominal"
                         value="{{ old('nominal') }}">
                     @error('nominal')
                         <div class="text text-danger">

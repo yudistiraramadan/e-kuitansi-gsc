@@ -20,7 +20,9 @@
                     <td>{{ $data->pengaju }}</td>
                     <td>{{ $data->nominal }}</td>
                     <td>{{ $data->keperluan }}</td>
-                    <td>{{ $data->jenis_kuitansi }}</td>
+                    <td>
+                        {{ $data->jenis_kuitansi }}
+                    </td>
                     <td>
                         <div class="d-flex align-items-center">
                             <a data-toggle="tooltip" data-placement="top" title=""
@@ -66,7 +68,19 @@
         </tbody>
     </table>
     {{-- {{ $data->links() }} --}}
+
 </x-main>
 <script>
     let table = new DataTable('#tb-kuitansi');
+
+    // toastr.success('mekk')
 </script>
+@if (Session::has('success'))
+    <script>
+        toastr.options = {
+            "progressBar": true,
+            "closeButton": true,
+        }
+        toastr.success("{{ Session::get('success') }}", 'Berhasil');
+    </script>
+@endif

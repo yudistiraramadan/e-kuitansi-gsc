@@ -57,7 +57,7 @@ class KuitansiController extends Controller
             'pembayaran' => $request -> pembayaran,
             'tanggal' => $request -> tanggal,
         ]);
-        return redirect()->route('daftarKuitansi');
+        return redirect()->route('daftarKuitansi')->with('success','Kuitansi berhasil ditambahkan');
     }
 
     public function edit($id){
@@ -99,12 +99,12 @@ class KuitansiController extends Controller
             'pembayaran' => $request -> pembayaran,
             'tanggal' => $request -> tanggal,
         ]);
-        return redirect()->route('daftarKuitansi');
+        return redirect()->route('daftarKuitansi')->with('success', 'Kuitansi berhasil diedit');
     }
 
     public function destroy($id){
         $kuitansi = Kuitansi::findOrFail($id);
         $kuitansi->delete();
-        return redirect()->route('daftarKuitansi');
+        return redirect()->route('daftarKuitansi')->with('success','Kuitansi berhasil dihapus');
     }
 }
