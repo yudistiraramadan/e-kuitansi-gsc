@@ -8,18 +8,47 @@
 </head>
 
 <style>
+    /* body::before {
+        background-image: url("img/gsc/gsc.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        opacity: 0.5;
+    } */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-image: url("img/gsc/gsc.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        opacity: 0.1;
+        /* Atur tingkat transparansi di sini */
+        z-index: -1;
+        /* Pastikan pseudo-element berada di belakang elemen lainnya */
+    }
 
+
+    td {
+        color: #222222;
+        font-family: 'Montserrat'
+    }
 </style>
 
 <body>
     <table border="0" align="center" width="90%">
         <tr>
-            <td width="60px"><img src="{{ asset('img/gsc/gsc.png') }}" width="50px" /></td>
-            <td width="100px">Gerak Sedekah Cilacap</td>
+            <td width="40px"><img src="{{ asset('img/gsc/gsc.png') }}" width="50px" /></td>
+            <td width="100px" style="font-size:14px; font-weight:500;">Gerak Sedekah Cilacap</td>
             <td colspan="2"
                 style="text-align: center; font-size: 22px; font-family:Arial, Helvetica, sans-serif; font-weight:700; letter-spacing:10px">
                 KUITANSI</td>
-            <td width="33%" style="text-align: right; font-size:12px;">Jalan Sulawesi, Perum Puri Tanjung Intan No.B2
+            <td width="33%" style="font-size:12px; font-weight:500; text-align:right">Jalan Sulawesi, Perum Puri
+                Tanjung Intan No.B2
                 Gunungsimping
             </td>
         </tr>
@@ -30,66 +59,67 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="font-family:'Poppins'; font-size:14px; font-weight: 600; font-style:italic;">
+            <td colspan="2" style="font-size:16px; font-weight:600; font-style:italic; padding-top:10px;">
                 Bismillahirahmanirrahim</td>
         </tr>
         <tr>
-            <td colspan="5" style="font-family:'Poppins'; font-size:14px; font-weight: normal; ">
+            <td colspan="5" style="font-size:14px; font-weight:500; padding-top:4px;">
                 Dengan ini saya, atas nama (diri sendiri/lembaga/perusahaan)</td>
         </tr>
         <tr>
-            <td colspan="5"
-                style="font-family:'Poppins'; font-size:14px; font-weight: normal; font-style:italic; padding-bottom:10px;">
+            <td colspan="5" style="font-size:14px; font-weight:500; padding-top:4px; padding-bottom:10px;">
                 Yudistira Ramadan Kalimasada</td>
         </tr>
         <tr>
-            <td colspan="2"><input type="checkbox" name="" id="">&nbsp; Zakat</td>
+            <td colspan="2"><input type="checkbox" id="">&nbsp;
+                <span style="font-size:14px; font-weight:500;">Zakat</span>
+            </td>
             <td width="5%" style="text-align: center">:</td>
-            <td colspan="2">Pembangunan Rumah Sholeh <span
+            <td colspan="2" style="font-size:14px; font-weight:500;">Pembangunan Rumah Sholeh <span
                     style="font-family:'Nunito'; font-size: 10px; font-style:italic;">(keperluan)</span></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="checkbox" name="" id="">&nbsp; Tabung Kebaikan</td>
+            <td colspan="2"><input type="checkbox" id="">&nbsp;
+                <span style="font-size:14px; font-weight:500;">Tabung Kebaikan</span>
+            </td>
             <td width="5%" style="text-align: center">:</td>
-            <td colspan="2"></td>
+            <td colspan="2" style="font-size:14px; font-weight:500;"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="checkbox" name="" id="">&nbsp; Kotak Infaq</td>
+            <td colspan="2"><input type="checkbox" id="">&nbsp;
+                <span style="font-size:14px; font-weight:500;">Kotak Infaq</span>
+            </td>
             <td width="5%" style="text-align: center">:</td>
-            <td colspan="2">Rp. 50.000.000</td>
+            <td colspan="2" style="font-size:14px; font-weight:500;">Rp. 50.000.000</td>
         </tr>
         <tr>
-            <td colspan="2"><input type="checkbox" name="" id="">&nbsp; Wakaf</td>
+            <td colspan="2"><input type="checkbox" id="">&nbsp;
+                <span style="font-size:14px; font-weight:500;">Wakaf</span>
+            </td>
             <td width="5%" style="text-align: center">:</td>
-            <td colspan="2">LIMA PULUH JUTA RUPIAH</td>
+            <td colspan="2" style="font-size:14px; font-weight:500;">LIMA PULUH JUTA RUPIAH</td>
         </tr>
         <tr>
-            <td colspan="2"><input type="checkbox" name="" id="">&nbsp; Sedekah</td>
+            <td colspan="2"><input type="checkbox" id="">&nbsp;
+                <span style="font-size:14px; font-weight:500;">Sedekah</span>
+            </td>
             <td width="5%" style="text-align: center">:</td>
             <td colspan="2" style="text-transform:uppercase;"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="checkbox" name="" id="">&nbsp; Kemanusiaan</td>
+            <td colspan="2"><input type="checkbox" id="">&nbsp;
+                <span style="font-size:14px; font-weight:500; padding-bottom:10px;">Kemanusiaan</span>
+            </td>
             <td width="5%" style="text-align: center">:</td>
             <td colspan="2" style="text-transform:uppercase;"></td>
         </tr>
-        {{-- <tr>
-            <td colspan="2" height="30px">TERIMA DARI</td>
-            <td style="text-align: center">:</td>
-            <td colspan="2" style="text-transform:uppercase;"></td>
-        </tr>
-        <tr>
-            <td colspan="2" height="30px">GUNA PEMBAYARAN</td>
-            <td style="text-align: center">:</td>
-            <td colspan="2" style="text-transform:uppercase;">KOTAK INFAQ</td>
-        </tr> --}}
         <tr>
             <td colspan="5">
                 <hr />
             </td>
         </tr>
         <tr>
-            <td colspan="3" style="text-align: left">
+            <td colspan="3" style="text-align: left; font-size:14px; font-weight:500;">
                 Cilacap, 06 Mei 2024
             </td>
         </tr>
@@ -106,8 +136,8 @@
         <tr>
             <td></td>
             <td></td>
-            <td colspan="2" style="text-align: center;">(Yudistira Ramadan Kalimasada)</td>
-            <td colspan="2" style="text-align: center;">(Kholifatun Mualfiyah)</td>
+            <td colspan="2" style="text-align: center; font-size:14px; font-weight:500;">(Slamet Kopling)</td>
+            <td colspan="2" style="text-align: center; font-size:14px; font-weight:500;">(Kholifatun Mualfiyah)</td>
         </tr>
         <tr>
             <td colspan="5">
