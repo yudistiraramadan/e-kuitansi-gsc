@@ -12,7 +12,7 @@ class KuitansiController extends Controller
     }
 
     public function index(){
-        $kuitansi = Kuitansi::all();
+        $kuitansi = Kuitansi::orderBy('tanggal','desc')->get();
         
         // dd($kuitansi);
         return view('kuitansi.daftar-kuitansi', ['title'=>'Daftar Kuitansi'], compact('kuitansi'));

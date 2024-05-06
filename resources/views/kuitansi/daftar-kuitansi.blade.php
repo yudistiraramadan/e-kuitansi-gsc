@@ -7,25 +7,33 @@
     <table class="table table-bordered table-hover" id="tb-kuitansi">
         <thead>
             <tr>
+                <th scope="col" style="text-align:left;">No.</th>
                 <th scope="col">Terima Dari</th>
                 <th scope="col">Nominal</th>
                 <th scope="col">Keperluan</th>
                 <th scope="col">Kuitansi</th>
-                <th style="text-align: center;" scope="col">Aksi</th>
+                <th scope="col">Tanggal</th>
+                <th style="text-align: center;" style="width:10%" scope="col">Aksi</th>
             </tr>
         </thead>
         <tbody>
+            @php
+                $no = 1;
+            @endphp
             @forelse ($kuitansi as $data)
                 <tr>
+                    <td style="text-align:left;">{{ $no++ }}</td>
                     <td>{{ $data->pengaju }}</td>
-                    <td>Rp. {{ $data->nominal }}</td>
+                    <td>Rp. {{ number_format($data->nominal, 0, ',', '.') }}</td>
                     <td>{{ $data->keperluan }}</td>
                     <td>
                         {{ $data->jenis_kuitansi }}
                     </td>
+                    {{-- <td>{{ $data->tanggal }}</td> --}}
+                    <td>{{ \Carbon\Carbon::parse($data->tanggal)->locale('id')->isoFormat('dddd, D MMMM Y') }}</td>
                     <td>
                         <div class="d-flex align-items-center">
-                            <a data-toggle="tooltip" data-placement="top" title=""
+                            <a data-toggle="tooltip" data-placement="top" title="Edit"
                                 href="/edit-kuitansi/{{ $data->id }}" data-original-title="Edit">
                                 <svg width="21" height="21" ;viewbox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -34,8 +42,8 @@
                                         fill="#FFC94A"></path>
                                 </svg>
                             </a>&nbsp;&nbsp;
-                            <a href="/delete-kuitansi/{{ $data->id }}" data-id="" class="delete-kecamatan"
-                                name="delete" data-toggle="tooltip" data-placement="top" title="" data-id="4"
+                            <a href="/delete-kuitansi/{{ $data->id }}" data-id="" class="delete-kuitansi"
+                                name="delete" data-toggle="tooltip" data-placement="top" title="Hapus" data-id="4"
                                 data-original-title="Hapus"><svg width="22" height="22" viewBox="0 0 22 22"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -44,9 +52,9 @@
                                     </path>
                                 </svg>
                             </a>&nbsp;&nbsp;
-                            <a href="/edit-kuitansi/{{ $data->id }}" data-id="" class="delete-kecamatan"
-                                name="delete" data-toggle="tooltip" data-placement="top" title="" data-id="4"
-                                data-original-title="Hapus"><svg width="22" height="22" fill="#03AED2"
+                            <a href="/edit-kuitansi/{{ $data->id }}" data-id="" class="print-kuitansi"
+                                name="print" data-toggle="tooltip" data-placement="top" title="Print" data-id="4"
+                                data-original-title="Print"><svg width="22" height="22" fill="#03AED2"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#03AED2">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -71,7 +79,26 @@
 
 </x-main>
 <script>
-    let table = new DataTable('#tb-kuitansi');
+    // let table = new DataTable('#tb-kuitansi');
+    // $document().ready(function() {
+    //     $('#tb-kuitansi').Datatable({
+    //         "order": [
+    //             [0, "desc"]
+    //         ]
+    //     });
+    // });
+
+
+    $(document).ready(function() {
+        // Membuat objek DataTable dan menyimpannya dalam variabel 'table'
+        let table = $('#tb-kuitansi').DataTable({
+            // "order": [
+            //     ["date", "asc"]
+            // ]
+        });
+
+        // Anda bisa menambahkan konfigurasi tambahan untuk DataTable di sini
+    });
 </script>
 @if (Session::has('success'))
     <script>
