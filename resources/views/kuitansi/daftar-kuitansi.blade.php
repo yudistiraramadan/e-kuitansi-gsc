@@ -72,8 +72,6 @@
 </x-main>
 <script>
     let table = new DataTable('#tb-kuitansi');
-
-    // toastr.success('mekk')
 </script>
 @if (Session::has('success'))
     <script>

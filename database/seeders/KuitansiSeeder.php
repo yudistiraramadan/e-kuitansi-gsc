@@ -40,5 +40,32 @@ class KuitansiSeeder extends Seeder
             'pembayaran' => 'Lainnya',
             'tanggal' => '2024-04-30',
         ]);
+        Kuitansi::create([
+            'pengaju' => 'Yudistira Tampan MasyaAllah',
+            'nominal' => 500000000,
+            'terbilang' => 'LIMA RATUS JUTA RUPIAH',
+            'keperluan' => 'Pembangunan Rumah Sholeh',
+            'jenis_kuitansi' => 'Pemasukan',
+            'pembayaran' => 'Transfer',
+            'tanggal' => '2024-04-30',
+        ]);
+        Kuitansi::create([
+            'pengaju' => 'Juan Pristel',
+            'nominal' => 1000000,
+            'terbilang' => 'SATU JUTA RUPIAH',
+            'keperluan' => 'Bantu Banjir Kawunganten',
+            'jenis_kuitansi' => 'Pemasukan',
+            'pembayaran' => 'Tunai',
+            'tanggal' => '2024-04-30',
+        ]);
+        Kuitansi::create([
+            'pengaju' => 'Afiq Kopling',
+            'nominal' => 50000000,
+            'terbilang' => 'LIMA PULUH JUTA RUPIAH',
+            'keperluan' => 'Pembangunan Mutan Foundation',
+            'jenis_kuitansi' => 'Pemasukan',
+            'pembayaran' => 'Tunai',
+            'tanggal' => '2024-04-30',
+        ]);
     }
 }
