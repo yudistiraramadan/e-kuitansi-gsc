@@ -18,7 +18,7 @@ class KuitansiSeeder extends Seeder
             'nominal' => 500000,
             'terbilang' => 'LIMA RATUS RIBU RUPIAH',
             'keperluan' => 'Kotak Infaq',
-            'jenis_kuitansi' => 'Pemasukan',
+            'jenis_kuitansi' => 'Zakat',
             'pembayaran' => 'Tunai',
             'tanggal' => '2024-04-30',
         ]);
@@ -27,7 +27,7 @@ class KuitansiSeeder extends Seeder
             'nominal' => 120000,
             'terbilang' => 'SERATUS DUA PULUH RIBU RUPIAH',
             'keperluan' => 'Uang Makan Basecamp',
-            'jenis_kuitansi' => 'Penerimaan Barang',
+            'jenis_kuitansi' => 'Wakaf',
             'pembayaran' => 'Transfer',
             'tanggal' => '2024-04-30',
         ]);
@@ -36,7 +36,7 @@ class KuitansiSeeder extends Seeder
             'nominal' => 80000,
             'terbilang' => 'DELAPAN PULUH RIBU RUPIAH',
             'keperluan' => 'Pentasyarufan',
-            'jenis_kuitansi' => 'Pengeluaran',
+            'jenis_kuitansi' => 'Sedekah',
             'pembayaran' => 'Lainnya',
             'tanggal' => '2024-04-30',
         ]);

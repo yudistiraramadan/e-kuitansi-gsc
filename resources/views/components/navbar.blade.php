@@ -15,17 +15,16 @@
                         alt="Charles Hall" /> <span class="text-dark">Bendahara</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
-                            data-feather="user"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i>
-                        Analytics</a>
+                    <a class="dropdown-item" href="{{ route('dashboard') }}"><i class="align-middle me-1"
+                            data-feather="sliders"></i> Dashboard</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i>
-                        Settings & Privacy</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i>
-                        Help Center</a>
+                    <a class="dropdown-item" href="{{ route('daftarKuitansi') }}"><i class="align-middle me-1"
+                            data-feather="file-text"></i>
+                        Kuitansi</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a class="dropdown-item" href="{{ route('daftarKuitansi') }}"><i class="align-middle me-1"
+                            data-feather="file"></i>
+                        Kuitansi Kosong</a>
                 </div>
             </li>
         </ul>

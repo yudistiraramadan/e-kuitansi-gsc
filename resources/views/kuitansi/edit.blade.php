@@ -130,13 +130,16 @@
         <br><br>
         <div class="row">
             <div class="col-lg-4">
-                <label for="jenis_kuitansi" class="form-label">Jenis Kuitansi</label>
+                <label for="jenis_kuitansi" class="form-label">Jenis Donasi</label>
                 <select class="form-select" name="jenis_kuitansi" id="jenis_kuitansi">
                     {{-- <option selected>Jenis Kuitansi</option> --}}
                     <option value="{{ $kuitansi->jenis_kuitansi }}">{{ $kuitansi->jenis_kuitansi }}</option>
-                    <option value="Pemasukan">Pemasukan</option>
-                    <option value="Pengeluaran">Pengeluaran</option>
-                    <option value="Penerimaan Barang">Penerimaan Barang</option>
+                    <option value="Zakat">Zakat</option>
+                    <option value="Tabung Kebaikan">Tabung Kebaikan</option>
+                    <option value="Kotak Infaq">Kotak Infaq</option>
+                    <option value="Wakaf">Wakaf</option>
+                    <option value="Sedekah">Sedekah</option>
+                    <option value="Donasi Kemanusiaan">Donasi Kemanusiaan</option>
                 </select>
                 @error('jenis_kuitansi')
                     <div class="text text-danger">

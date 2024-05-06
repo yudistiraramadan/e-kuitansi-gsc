@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('dashboard');
 // });
 
-Route::get('/', [KuitansiController::class, 'dashboard']);
+Route::get('/', [KuitansiController::class, 'dashboard'])->name('dashboard');
 Route::get('/daftar-kuitansi', [KuitansiController::class, 'index'])->name('daftarKuitansi');
 Route::get('/tambah-kuitansi', [KuitansiController::class, 'create'])->name('tambahKuitansi');
 Route::post('/store-kuitansi', [KuitansiController::class, 'store'])->name('storeKuitansi');
