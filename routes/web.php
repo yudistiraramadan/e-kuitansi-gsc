@@ -14,3 +14,7 @@ Route::post('/store-kuitansi', [KuitansiController::class, 'store'])->name('stor
 Route::get('/edit-kuitansi/{id}', [KuitansiController::class, 'edit'])->name('editKuitansi');
 Route::post('/update-kuitansi/{id}', [KuitansiController::class, 'update'])->name('updateKuitansi');
 Route::get('/delete-kuitansi/{id}', [KuitansiController::class, 'destroy'])->name('deleteKuitansi');
+
+Route::get('/kuitansi', function(){
+    return view('kuitansi');
+});
