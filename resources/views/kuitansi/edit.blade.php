@@ -1,5 +1,20 @@
 <x-main>
     <x-slot:title>{{ $title }}</x-slot:title>
+    <script>
+        function formatAngka(input) {
+            // Menghapus titik sebelum melakukan format
+            var number = input.value.replace(/\./g, '');
+
+            // Menghapus titik jika ada lebih dari satu
+            number = number.replace(/\.(?=.*\.)/g, '');
+
+            // Hapus semua karakter non-angka
+            number = number.replace(/\D/g, '');
+
+            // Format angka dengan titik sebagai pemisah ribuan
+            input.value = number.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+    </script>
 
     <form action="{{ route('updateKuitansi', $kuitansi->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -35,7 +50,7 @@
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label for="nominal" class="form-label">Nominal</label>
-                    <input type="number" class="form-control" id="nominal" name="nominal"
+                    <input type="text" class="form-control" id="nominal" name="nominal" onkeyup="formatAngka(this)"
                         value="{{ $kuitansi->nominal }}">
                     @error('nominal')
                         <div class="text text-danger">

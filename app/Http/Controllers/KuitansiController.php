@@ -46,11 +46,14 @@ class KuitansiController extends Controller
                 'tanggal.required' => 'data tidak boleh kosong',
             ]
             );
-
+        
+        // Hapus titik dari nilai 'nominal'
+        $nominal = str_replace('.', '', $request->nominal);
+        
         // create kuitansi
         Kuitansi::create([
             'pengaju' => $request -> pengaju,
-            'nominal' => $request -> nominal,
+            'nominal' => $nominal,
             'terbilang' => $request -> terbilang,
             'keperluan' => $request -> keperluan,
             'jenis_kuitansi' => $request -> jenis_kuitansi,
@@ -89,10 +92,12 @@ class KuitansiController extends Controller
                 'tanggal.required' => 'data tidak boleh kosong',
             ]
             );
-
+        
+        // Hapus titik dari nilai 'nominal'
+        $nominal = str_replace('.', '', $request->nominal);
         $kuitansi->update([
             'pengaju' => $request -> pengaju,
-            'nominal' => $request -> nominal,
+            'nominal' => $nominal,
             'terbilang' => $request -> terbilang,
             'keperluan' => $request -> keperluan,
             'jenis_kuitansi' => $request -> jenis_kuitansi,
