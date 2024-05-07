@@ -48,7 +48,7 @@
                                         </path>
                                     </svg>
                                 </a>&nbsp;&nbsp;
-                                <a href="/edit-kuitansi/{{ $data->id }}" data-id="" class="print-kuitansi"
+                                <a href="/print-kuitansi/{{ $data->id }}" data-id="" class="print-kuitansi"
                                     name="print" data-toggle="tooltip" data-placement="top" title="Print"
                                     data-id="4" data-original-title="Print"><svg width="22" height="22"
                                         fill="#03AED2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +63,8 @@
                                         </g>
                                     </svg>
                                 </a>&nbsp;&nbsp;
+                                {{-- <a href="{{ route('printKuitansi', ['id' => $data->id]) }}"
+                                    class="btn btn-primary">Cetak</a> --}}
                             </div>
                         </td>
                     </tr>

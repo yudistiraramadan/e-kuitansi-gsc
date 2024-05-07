@@ -15,6 +15,10 @@ Route::get('/edit-kuitansi/{id}', [KuitansiController::class, 'edit'])->name('ed
 Route::post('/update-kuitansi/{id}', [KuitansiController::class, 'update'])->name('updateKuitansi');
 Route::get('/delete-kuitansi/{id}', [KuitansiController::class, 'destroy'])->name('deleteKuitansi');
 
+Route::get('/print-kuitansi/{id}', [KuitansiController::class, 'print'])->name('printKuitansi');
+// Route::get('kuitansi/{id}/print', [KuitansiController::class, 'printInvoice'])->name('kuitansi.print');
+
+
 Route::get('/kuitansi', function(){
-    return view('kuitansi');
+    return view('kuitansi.print');
 });

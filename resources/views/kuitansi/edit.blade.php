@@ -76,10 +76,10 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="mb-3">
-                    <label for="pengaju" class="form-label">Nama Pengaju</label>
+                    <label for="pengaju" class="form-label">Nama Donatur</label>
                     <input type="text" class="form-control" id="pengaju" name="pengaju"
                         value="{{ $kuitansi->pengaju }}">
-                    <div id="pengaju" class="form-text">Nama pengaju/penerima pembuat kuitansi</div>
+                    <div id="pengaju" class="form-text">Nama donatur/pengaju/penerima pembuat kuitansi</div>
                     @error('pengaju')
                         <div class="text text-danger">
                             {{ $message }}

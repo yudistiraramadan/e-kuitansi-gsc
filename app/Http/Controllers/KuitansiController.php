@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Kuitansi;
 use Illuminate\Http\Request;
 
@@ -111,5 +112,15 @@ class KuitansiController extends Controller
         $kuitansi = Kuitansi::findOrFail($id);
         $kuitansi->delete();
         return redirect()->route('daftarKuitansi')->with('success','Kuitansi berhasil dihapus');
+    }
+
+    public function print(Request $request){
+        $kuitansi = Kuitansi::findOrFail($request->id);
+        // dd($kuitansi);
+
+        // $pdf = Pdf::loadView('kuitansi.kuitansi', compact('kuitansi'));
+        $pdf = Pdf::loadView('kuitansi.print', compact('kuitansi'));
+        $pdf->setPaper('A4', 'landscape');
+        return $pdf->download('e-kuitansi.pdf');
     }
 }
