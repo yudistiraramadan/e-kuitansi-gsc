@@ -38,7 +38,7 @@
                                             fill="#FFC94A"></path>
                                     </svg>
                                 </a>&nbsp;&nbsp;
-                                <a href="/delete-kuitansi/{{ $data->id }}" data-id="" class="delete-kuitansi"
+                                <a href="javascript:void(0)" data-id="{{ $data->id }}" class="delete-kuitansi"
                                     name="delete" data-toggle="tooltip" data-placement="top" title="Hapus"
                                     data-id="4" data-original-title="Hapus"><svg width="22" height="22"
                                         viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +63,7 @@
                                         </g>
                                     </svg>
                                 </a>&nbsp;&nbsp;
+                                @csrf
                                 {{-- <a href="{{ route('printKuitansi', ['id' => $data->id]) }}"
                                     class="btn btn-primary">Cetak</a> --}}
                             </div>
@@ -79,17 +80,9 @@
     {{-- {{ $data->links() }} --}}
 
 </x-main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    // let table = new DataTable('#tb-kuitansi');
-    // $document().ready(function() {
-    //     $('#tb-kuitansi').Datatable({
-    //         "order": [
-    //             [0, "desc"]
-    //         ]
-    //     });
-    // });
-
-
+    // Swal.fire("SweetAlert2 is working!");
     $(document).ready(function() {
         // Membuat objek DataTable dan menyimpannya dalam variabel 'table'
         let table = $('#tb-kuitansi').DataTable({
@@ -110,3 +103,49 @@
         toastr.success("{{ Session::get('success') }}", 'Berhasil');
     </script>
 @endif
+
+<script>
+    $(document).on('click', '.delete-kuitansi', function() {
+        id = $(this).data('id');
+        Swal.fire({
+            title: 'Hapus data Kecamatan?',
+            text: "Apakah anda yakin ingin menghapus data kecamatan!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#54ca68',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya Hapus',
+            cancelButtonText: 'Tidak'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    async: true,
+                    type: 'POST',
+                    url: '/delete-kuitansi/id',
+                    data: {
+                        id: id
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    beforeSend: function() {
+                        $('#ok_button').text('Hapus Data');
+                    },
+                    success: function(data) {
+                        setTimeout(function() {
+                            $('#confirmModal').modal('hide');
+                            location.reload();
+                        }, 3000);
+
+                        window.setTimeout(function() {}, 1000);
+                        Swal.fire(
+                            'Dihapus!',
+                            'Data kecamatan berhasil dihapus.',
+                            'success'
+                        )
+                    }
+                })
+            }
+        });
+    });
+</script>

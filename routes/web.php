@@ -13,7 +13,9 @@ Route::get('/tambah-kuitansi', [KuitansiController::class, 'create'])->name('tam
 Route::post('/store-kuitansi', [KuitansiController::class, 'store'])->name('storeKuitansi');
 Route::get('/edit-kuitansi/{id}', [KuitansiController::class, 'edit'])->name('editKuitansi');
 Route::post('/update-kuitansi/{id}', [KuitansiController::class, 'update'])->name('updateKuitansi');
-Route::get('/delete-kuitansi/{id}', [KuitansiController::class, 'destroy'])->name('deleteKuitansi');
+Route::post('/delete-kuitansi/{id}', [KuitansiController::class, 'delete'])->name('deleteKuitansi');
+// Route::post('/delete-kecamatan/{id}', [KecamatanController::class, 'delete'])->name('deletekecamatan');
+
 
 Route::get('/print-kuitansi/{id}', [KuitansiController::class, 'print'])->name('printKuitansi');
 // Route::get('kuitansi/{id}/print', [KuitansiController::class, 'printInvoice'])->name('kuitansi.print');
