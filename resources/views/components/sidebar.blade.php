@@ -24,16 +24,5 @@
                     <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Kuitansi</span>
                 </a>
             </li>
-
-
-            {{-- <li class="sidebar-header">
-                Blank Print
-            </li> --}}
-
-            {{-- <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-buttons.html">
-                    <i class="align-middle" data-feather="file"></i> <span class="align-middle">Kuitansi Kosong</span>
-                </a>
-            </li> --}}
     </div>
 </nav>

@@ -63,9 +63,6 @@
                                         </g>
                                     </svg>
                                 </a>&nbsp;&nbsp;
-                                @csrf
-                                {{-- <a href="{{ route('printKuitansi', ['id' => $data->id]) }}"
-                                    class="btn btn-primary">Cetak</a> --}}
                             </div>
                         </td>
                     </tr>
@@ -77,21 +74,13 @@
             </tbody>
         </table>
     </div>
-    {{-- {{ $data->links() }} --}}
 
 </x-main>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     // Swal.fire("SweetAlert2 is working!");
     $(document).ready(function() {
-        // Membuat objek DataTable dan menyimpannya dalam variabel 'table'
-        let table = $('#tb-kuitansi').DataTable({
-            // "order": [
-            //     ["date", "asc"]
-            // ]
-        });
-
-        // Anda bisa menambahkan konfigurasi tambahan untuk DataTable di sini
+        let table = $('#tb-kuitansi').DataTable({});
     });
 </script>
 @if (Session::has('success'))
