@@ -85,66 +85,66 @@
                         <label>Telah diterima dari</label>
                     </td>
                     <td width="5%" style="text-align: center">:</td>
-                    <td colspan="2">{{ $kuitansi->pengaju }}</td>
+                    <td colspan="2">Sigit Rendang</td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <label>Keperluan</label>
                     </td>
                     <td width="5%" style="text-align: center">:</td>
-                    <td colspan="2">{{ $kuitansi->keperluan }}</td>
+                    <td colspan="2">Pembangunan Rumah Sholeh</td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <label>Nominal</label>
                     </td>
                     <td width="5%" style="text-align: center">:</td>
-                    <td colspan="2">Rp. {{ number_format($kuitansi->nominal, 0, ',', '.') }}</td>
+                    <td colspan="2">Rp. 5.000.000</td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <label>Terbilang</label>
                     </td>
                     <td width="5%" style="text-align: center">:</td>
-                    <td colspan="2">{{ $kuitansi->terbilang }}</td>
+                    <td colspan="2">LIMA JUTA RUPIAH</td>
                 </tr>
                 <tr>
                     <td colspan="5">
-                        <input type="checkbox" {{ $kuitansi->pembayaran == 'Tunai' ? 'checked' : '' }}>
-                        <label>Tunai</label>&nbsp;&nbsp;&nbsp;
-                        <input type="checkbox" {{ $kuitansi->pembayaran == 'Transfer' ? 'checked' : '' }}>
-                        <label>Transfer</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="checkbox" {{ $kuitansi->pembayaran == 'Lainnya' ? 'checked' : '' }}>
+                        <input type="checkbox">
+                        <label>Tunai</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox">
+                        <label>Transfer</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox">
                         <label>Lainnya</label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="checkbox" {{ $kuitansi->jenis_kuitansi == 'Zakat' ? 'checked' : '' }}>
+                        <input type="checkbox">
                         <label>Zakat &nbsp;</label>
                     </td>
                     <td colspan="2">
-                        <input type="checkbox" {{ $kuitansi->jenis_kuitansi == 'Wakaf' ? 'checked' : '' }}>
+                        <input type="checkbox">
                         <label>Wakaf &nbsp;</label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="checkbox" {{ $kuitansi->jenis_kuitansi == 'Sedekah' ? 'checked' : '' }}>
+                        <input type="checkbox">
                         <label>Sedekah &nbsp;</label>
                     </td>
                     <td colspan="2">
-                        <input type="checkbox" {{ $kuitansi->jenis_kuitansi == 'Kotak Infaq' ? 'checked' : '' }}>
+                        <input type="checkbox">
                         <label>Kotak Infaq &nbsp;</label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="checkbox" {{ $kuitansi->jenis_kuitansi == 'Tabung Kebaikan' ? 'checked' : '' }}>
+                        <input type="checkbox">
                         <label>Tabung Kebaikan &nbsp;</label>
                     </td>
                     <td colspan="2">
-                        <input type="checkbox" {{ $kuitansi->jenis_kuitansi == 'Kemanusiaan' ? 'checked' : '' }}>
+                        <input type="checkbox">
                         <label>Donasi Kemanusiaan &nbsp;</label>
                     </td>
                 </tr>
@@ -155,7 +155,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: center;">
-                        Cilacap, {{ \Carbon\Carbon::parse($kuitansi->tanggal)->isoFormat('D MMMM Y') }}
+                        Cilacap, 07 Mei 2024
                     </td>
                     <td colspan="2" style="text-align: center;">Donatur</td>
                     <td style="text-align: center;">Bendahara</td>
@@ -173,7 +173,7 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td colspan="2" style="text-align: center;">({{ $kuitansi->pengaju }})
+                    <td colspan="2" style="text-align: center;">(Sigit Rendang)
                     </td>
                     <td colspan="1" style="text-align: center;">(Kholifatun
                         Mualfiyah)</td>

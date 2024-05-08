@@ -28,7 +28,7 @@
                         <td>{{ $data->keperluan }}</td>
                         <td>{{ \Carbon\Carbon::parse($data->tanggal)->locale('id')->isoFormat('dddd, D MMMM Y') }}</td>
                         <td>
-                            <div class="d-flex">
+                            <div class="d-flex" style="justify-content: center; align-items:center;">
                                 <a data-toggle="tooltip" data-placement="top" title="Edit"
                                     href="/edit-kuitansi/{{ $data->id }}" data-original-title="Edit">
                                     <svg width="21" height="21" ;viewbox="0 0 21 21" fill="none"

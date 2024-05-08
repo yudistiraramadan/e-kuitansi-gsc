@@ -79,7 +79,7 @@
                     <label for="pengaju" class="form-label">Nama Donatur</label>
                     <input type="text" class="form-control" id="pengaju" name="pengaju"
                         value="{{ $kuitansi->pengaju }}">
-                    <div id="pengaju" class="form-text">Nama donatur/pengaju/penerima pembuat kuitansi</div>
+                    <div id="pengaju" class="form-text">Nama donatur/pengaju/pembuat kuitansi</div>
                     @error('pengaju')
                         <div class="text text-danger">
                             {{ $message }}

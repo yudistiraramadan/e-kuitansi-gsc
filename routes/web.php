@@ -20,5 +20,5 @@ Route::get('/print-kuitansi/{id}', [KuitansiController::class, 'print'])->name('
 
 
 Route::get('/kuitansi', function(){
-    return view('kuitansi.print');
+    return view('kuitansi.sample');
 });
