@@ -16,7 +16,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="{{ route('dashboard') }}"><i class="align-middle me-1"
-                            data-feather="sliders"></i> Dashboard</a>
+                            data-feather="sliders"></i> E-KUITANSI GSC</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('daftarKuitansi') }}"><i class="align-middle me-1"
                             data-feather="file-text"></i>
