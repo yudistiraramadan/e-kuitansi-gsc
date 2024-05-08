@@ -108,8 +108,8 @@
     $(document).on('click', '.delete-kuitansi', function() {
         id = $(this).data('id');
         Swal.fire({
-            title: 'Hapus data Kecamatan?',
-            text: "Apakah anda yakin ingin menghapus data kecamatan!",
+            title: 'Hapus Kuitansi?',
+            text: "Apakah anda yakin ingin menghapus kuitansi!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#54ca68',
@@ -129,7 +129,7 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     beforeSend: function() {
-                        $('#ok_button').text('Hapus Data');
+                        $('#ok_button').text('Hapus Kuitansi');
                     },
                     success: function(data) {
                         setTimeout(function() {
@@ -140,7 +140,7 @@
                         window.setTimeout(function() {}, 1000);
                         Swal.fire(
                             'Dihapus!',
-                            'Data kecamatan berhasil dihapus.',
+                            'Kuitansi berhasil dihapus.',
                             'success'
                         )
                     }
