@@ -26,14 +26,14 @@
             </li>
 
 
-            <li class="sidebar-header">
+            {{-- <li class="sidebar-header">
                 Blank Print
-            </li>
+            </li> --}}
 
-            <li class="sidebar-item">
+            {{-- <li class="sidebar-item">
                 <a class="sidebar-link" href="ui-buttons.html">
                     <i class="align-middle" data-feather="file"></i> <span class="align-middle">Kuitansi Kosong</span>
                 </a>
-            </li>
+            </li> --}}
     </div>
 </nav>

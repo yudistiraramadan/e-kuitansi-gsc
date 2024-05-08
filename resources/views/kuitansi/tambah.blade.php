@@ -22,29 +22,29 @@
             if (nilai < 12) {
                 penyimpanan = ' ' + huruf[nilai];
             } else if (nilai < 20) {
-                penyimpanan = convertToWords(Math.floor(nilai - 10)) + ' Belas';
+                penyimpanan = convertToWords(Math.floor(nilai - 10)) + ' Belas ';
             } else if (nilai < 100) {
                 var bagi = Math.floor(nilai / 10);
-                penyimpanan = convertToWords(bagi) + ' Puluh' + convertToWords(nilai % 10);
+                penyimpanan = convertToWords(bagi) + ' Puluh ' + convertToWords(nilai % 10);
             } else if (nilai < 200) {
-                penyimpanan = ' Seratus' + convertToWords(nilai - 100);
+                penyimpanan = ' Seratus ' + convertToWords(nilai - 100);
             } else if (nilai < 1000) {
                 var bagi = Math.floor(nilai / 100);
-                penyimpanan = convertToWords(bagi) + ' Ratus' + convertToWords(nilai % 100);
+                penyimpanan = convertToWords(bagi) + ' Ratus ' + convertToWords(nilai % 100);
             } else if (nilai < 2000) {
-                penyimpanan = ' Seribu' + convertToWords(nilai - 1000);
+                penyimpanan = ' Seribu ' + convertToWords(nilai - 1000);
             } else if (nilai < 1000000) {
                 var bagi = Math.floor(nilai / 1000);
-                penyimpanan = convertToWords(bagi) + ' Ribu' + convertToWords(nilai % 1000);
+                penyimpanan = convertToWords(bagi) + ' Ribu ' + convertToWords(nilai % 1000);
             } else if (nilai < 1000000000) {
                 var bagi = Math.floor(nilai / 1000000);
-                penyimpanan = convertToWords(bagi) + ' Juta' + convertToWords(nilai % 1000000);
+                penyimpanan = convertToWords(bagi) + ' Juta ' + convertToWords(nilai % 1000000);
             } else if (nilai < 1000000000000) {
                 var bagi = Math.floor(nilai / 1000000000);
-                penyimpanan = convertToWords(bagi) + ' Miliar' + convertToWords(nilai % 1000000000);
+                penyimpanan = convertToWords(bagi) + ' Miliar ' + convertToWords(nilai % 1000000000);
             } else if (nilai < 1000000000000000) {
                 var bagi = Math.floor(nilai / 1000000000000);
-                penyimpanan = convertToWords(bagi) + ' Triliun' + convertToWords(nilai % 1000000000000);
+                penyimpanan = convertToWords(bagi) + ' Triliun ' + convertToWords(nilai % 1000000000000);
             }
             return penyimpanan.trim();
         }
