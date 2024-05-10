@@ -166,8 +166,10 @@
                     <td colspan="2" style="text-align: center">
                         {{-- <img src="{{ asset('img/gsc/ttd-bendahara.png') }}" width="130px" /> --}}
                     </td>
-                    <td colspan="1" style="text-align: center">
-                        <img src="{{ asset('img/gsc/ttd-bendahara.png') }}" width="130px" />
+                    <td colspan="1" style="text-align: center; position: relative;">
+                        <img src="{{ asset('img/gsc/gsc-scann.png') }}" width="130px"
+                            style="position: absolute; top:20px; left: 20px; z-index: 0;">
+                        <img src="{{ asset('img/gsc/ttd-bendahara.png') }}" width="130px" style="z-index: 1;" />
                     </td>
                 </tr>
                 <tr>

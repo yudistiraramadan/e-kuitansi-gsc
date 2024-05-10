@@ -14,8 +14,6 @@ class KuitansiController extends Controller
 
     public function index(){
         $kuitansi = Kuitansi::orderBy('tanggal','desc')->get();
-        
-        // dd($kuitansi);
         return view('kuitansi.daftar-kuitansi', ['title'=>'Daftar Kuitansi'], compact('kuitansi'));
     }
     
@@ -48,10 +46,8 @@ class KuitansiController extends Controller
             ]
             );
         
-        // Hapus titik dari nilai 'nominal'
         $nominal = str_replace('.', '', $request->nominal);
         
-        // create kuitansi
         Kuitansi::create([
             'pengaju' => $request -> pengaju,
             'nominal' => $nominal,
@@ -72,7 +68,6 @@ class KuitansiController extends Controller
     public function update(Request $request, $id){
         $kuitansi = Kuitansi::findOrFail($id);
         
-        // validation
         $request->validate(
             [
                 'pengaju'=>'required',
@@ -94,7 +89,6 @@ class KuitansiController extends Controller
             ]
             );
         
-        // Hapus titik dari nilai 'nominal'
         $nominal = str_replace('.', '', $request->nominal);
         $kuitansi->update([
             'pengaju' => $request -> pengaju,
@@ -109,7 +103,6 @@ class KuitansiController extends Controller
     }
 
     public function delete(Request $request){
-        // $kuitansi = Kuitansi::findOrFail($id);
         $kuitansi = Kuitansi::find($request->get('id'));
         $kuitansi->delete();
         return redirect()->route('daftarKuitansi')->with('success','Kuitansi berhasil dihapus');
@@ -117,9 +110,6 @@ class KuitansiController extends Controller
 
     public function print(Request $request){
         $kuitansi = Kuitansi::findOrFail($request->id);
-        // dd($kuitansi);
-
-        // $pdf = Pdf::loadView('kuitansi.kuitansi', compact('kuitansi'));
         $pdf = Pdf::loadView('kuitansi.print', compact('kuitansi'));
         $pdf->setPaper('A4', 'landscape');
         return $pdf->download('e-kuitansi.pdf');

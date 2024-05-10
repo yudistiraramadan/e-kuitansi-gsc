@@ -12,7 +12,7 @@
                     <li class="list-inline-item">
 
                         <a class="text-muted" href="https://wa.me/6285228409840" target="_blank">Help and Support</a>
-                        | Version 2.1
+                        | Version 2.2
                     </li>
                 </ul>
             </div>
