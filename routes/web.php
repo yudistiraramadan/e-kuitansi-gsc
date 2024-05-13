@@ -20,6 +20,8 @@ Route::post('/delete-kuitansi/{id}', [KuitansiController::class, 'delete'])->nam
 Route::get('/print-kuitansi/{id}', [KuitansiController::class, 'print'])->name('printKuitansi');
 // Route::get('kuitansi/{id}/print', [KuitansiController::class, 'printInvoice'])->name('kuitansi.print');
 
+Route::get('/export-kuitansi', [KuitansiController::class, 'export'])->name('exportKuitansi');
+
 
 Route::get('/kuitansi', function(){
     return view('kuitansi.sample');

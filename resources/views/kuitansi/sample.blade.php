@@ -37,7 +37,7 @@
 
         th,
         td {
-            /* border: 1px solid #000; */
+            border: 1px solid #000;
             padding: 8px;
             text-align: left;
         }

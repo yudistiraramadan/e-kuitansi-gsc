@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Kuitansi;
 use Illuminate\Http\Request;
+use App\Exports\KuitansiExcel;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Maatwebsite\Excel\Facades\Excel;
 
 class KuitansiController extends Controller
 {
@@ -113,5 +115,9 @@ class KuitansiController extends Controller
         $pdf = Pdf::loadView('kuitansi.print', compact('kuitansi'));
         $pdf->setPaper('A4', 'landscape');
         return $pdf->download('e-kuitansi.pdf');
+    }
+
+    public function export(){
+        return Excel::download(new KuitansiExcel, 'kuitansi.xlsx');
     }
 }

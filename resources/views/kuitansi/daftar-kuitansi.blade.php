@@ -2,7 +2,11 @@
     <x-slot:title>{{ $title }}</x-slot:title>
 
     <a href="/tambah-kuitansi">
-        <div class="btn btn-success" style="margin-bottom: 10px;">Tambah data</div>
+        <div class="btn btn-primary" style="margin-bottom: 10px;">Tambah data</div>
+    </a>
+    &nbsp;
+    <a href="{{ route('exportKuitansi') }}">
+        <div class="btn btn-success" style="margin-bottom: 10px;">Export Excel</div>
     </a>
     <div class="table-responsive">
         <table class="table table-bordered table-hover" id="tb-kuitansi">
