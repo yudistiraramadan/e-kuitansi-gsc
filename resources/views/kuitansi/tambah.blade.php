@@ -173,7 +173,7 @@
         {{-- <button type="reset" class="btn btn-md btn-warning">Reset</button> --}}
         <a href="{{ route('daftarKuitansi') }}">
             <button type="button" class="btn btn-warning">Kembali</button>
-        </a>
+        </a>&nbsp;
         <button type="submit" class="btn btn-md btn-success me-3">Simpan</button>
     </form>
 </x-main>
