@@ -24,7 +24,7 @@
                 @php
                     $no = 1;
                 @endphp
-                @forelse ($kuitansi as $data)
+                @foreach ($kuitansi as $data)
                     <tr>
                         <td style="text-align:left;">{{ $no++ }}</td>
                         <td>{{ $data->pengaju }}</td>
@@ -70,11 +70,11 @@
                             </div>
                         </td>
                     </tr>
-                @empty
+                    {{-- @empty
                     <div class="btn btn-danger">
                         Data kuitansi belum tersedia.
-                    </div>
-                @endforelse
+                    </div> --}}
+                @endforeach
             </tbody>
         </table>
     </div>
